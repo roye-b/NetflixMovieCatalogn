@@ -20,6 +20,7 @@ jobs:
       - name: SSH to EC2 instance
         run: |
           echo "$SSH_PRIVATE_KEY" > mykey.pem
+          cat mykey.pem
           chmod 400 mykey.pem
           
           # Copy the files from the current wrok dir into the EC2 instance, under `~/app`.
