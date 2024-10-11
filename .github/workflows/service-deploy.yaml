@@ -24,4 +24,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no ubuntu@13.50.251.170 << 'EOF' 
           scp -r . ubuntu@13.50.251.170:~/app
           ls -la
+          ls -la ~/app
         EOF
