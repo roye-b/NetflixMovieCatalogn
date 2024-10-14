@@ -22,7 +22,7 @@ jobs:
 
     - name: Copy files to EC2
       run: | 
-        scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r ./NetflixMovieCatalogn/ ubuntu@16.16.115.25:/home/ubuntu/app/
+        scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r ./NetflixMovieCatalog/ ubuntu@16.16.115.25:/home/ubuntu/app/
         
     - name: Deploy application to EC2
       run: |
