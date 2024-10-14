@@ -17,13 +17,13 @@ jobs:
       uses: shimataro/ssh-key-action@v2.4.0
       with:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        known_hosts: 13.50.251.170
+        known_hosts: 13.50.14.191
 
     - name: Copy files to EC2 
       run: | 
-        scp -o StrictHostKeyChecking=no -r NetflixMovieCatalogn/ ubuntu@13.50.251.170:/home/ubuntu/app/
+        scp -o StrictHostKeyChecking=no -r NetflixMovieCatalogn/ ubuntu@13.50.14.191:/home/ubuntu/app/
     - name: Deploy application to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@13.50.251.170 << 'EOF' 
+        ssh -o StrictHostKeyChecking=no ubuntu@13.50.14.191 << 'EOF' 
           ls -la ~/app
         EOF
