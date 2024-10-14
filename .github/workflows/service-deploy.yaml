@@ -21,7 +21,7 @@ jobs:
 
     - name: Copy files to EC2 
       run: | 
-        scp -o StrictHostKeyChecking=no -r NetflixMovieCatalogn/ ubuntu@13.50.14.191:/home/ubuntu/app/
+        scp -o StrictHostKeyChecking=no -r /home/ubuntu/NetflixMovieCatalogn/ ubuntu@13.50.14.191:/home/ubuntu/app/
     - name: Deploy application to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@13.50.14.191 << 'EOF' 
